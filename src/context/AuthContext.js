@@ -1,6 +1,15 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 
+
+//1. import a hook and a class named - useContext, CreateContext
+//2. create a context
+// 3. create a provider
+// 4. consuming the provider
+
+
+
+
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
@@ -44,6 +53,8 @@ export function AuthProvider({ children }) {
     <AuthContext.Provider value={{ user, login, logout, getRoles, hasRole }}>
       {children}
     </AuthContext.Provider>
+
+    
   );
 }
 
